@@ -1,0 +1,24 @@
+{
+  "order": "ascending",
+  "key": "city",
+  "data": [
+    {
+      "_id": "6269ce3691126533cbb5a8d0",
+      "name": "Express",
+      "city": "Chicago",
+      "address": "123 Main St, Chicago, IL 61154",
+      "active": false,
+      "date": "2022-04-27T23:13:58.559Z",
+      "__v": 0
+    },
+    {
+      "_id": "626a1f3bb26e234cb172f7fd",
+      "name": "OSU Field House",
+      "active": false,
+      "city": "Corvallis",
+      "address": "1800 OSU St, Corvallis, OR 97331",
+      "date": "2022-04-28T04:59:39.922Z",
+      "__v": 0
+    }
+  ]
+}
