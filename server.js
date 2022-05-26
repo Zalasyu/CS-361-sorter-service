@@ -2,6 +2,7 @@
 const express = require('express');
 const sort = require('./controllers/sorter.js')
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 const app = express();;
 app.use(express.json());
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const port = 3000;
 
 
+app.use(morgan('dev'))
 
 // Add the bodyParser middelware to the express application
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,18 +27,11 @@ app.post('/', (req, res) => {
 })
 
 app.post('/sort/:key/:order', (req, res) => {
-  console.log(req.body)
-
-  console.log(req.params.key)
-  console.log(req.params.order)
 
   let json_data = req.body.data;
   json_data.sort(sort.compareValues(req.params.key, req.params.order))
+  console.log(json_data)
   res.send(json_data)
-
-
-
-
 
 });
 
